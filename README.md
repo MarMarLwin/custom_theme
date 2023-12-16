@@ -1,6 +1,6 @@
 # custom_theme
 
-A new Flutter project.
+A new Flutter project. This project is intended to create custom theme like dark and light mode, reative login ui.
 
 ## Getting Started
 
