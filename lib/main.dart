@@ -1,3 +1,4 @@
+import 'package:custom_theme/core/routes.dart';
 import 'package:custom_theme/injection.dart';
 import 'package:custom_theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -57,13 +58,14 @@ class AppConfig extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ThemeService>(builder: (context, themeService, child) {
-      return MaterialApp(
+      return MaterialApp.router(
           title: 'Crypto App',
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode:
               themeService.isDarkModeOn ? ThemeMode.dark : ThemeMode.light,
-          home: home);
+          routerConfig: routes,
+          );
     });
   }
 }

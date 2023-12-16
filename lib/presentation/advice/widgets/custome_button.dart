@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
-  const CustomButton({Key? key, required this.onPressed}) : super(key: key);
+  final String btnText;
+  const CustomButton({Key? key, required this.onPressed,required this.btnText}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class CustomButton extends StatelessWidget {
               color: themeData.colorScheme.secondary,
               borderRadius: BorderRadius.circular(15)),
           child: Text(
-            'Get Advice',
+            btnText,
             textAlign: TextAlign.center,
             style: themeData.textTheme.headline1!.copyWith(
               fontSize: 20,
