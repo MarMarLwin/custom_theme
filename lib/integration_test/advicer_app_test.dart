@@ -8,7 +8,7 @@ void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   group(
-    'end-to-end test',
+    'end-to-end test for advice',
     () {
       testWidgets(
         'tap on custom button, verify advice will be loaded',
