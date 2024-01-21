@@ -19,7 +19,7 @@ class AdviceCubit extends Cubit<AdvicerState> {
 
     final adviceOrFailure = await adviceUsecases.getAdviceUsecase();
 
-    emit(adviceOrFailure.fold((failure) => AdviceFailure(),
+    emit(adviceOrFailure.fold((failure) => const AdviceFailure(error: 'error'),
         (advice) => AdviceLoaded(advice: advice)));
   }
 }

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ErrorMessage extends StatelessWidget {
-  const ErrorMessage({Key? key}) : super(key: key);
+  const ErrorMessage({Key? key,required this.errorMessage}) : super(key: key);
 
-  static const String errorMessage =
-      'Ups, there was something going wrong, try again!';
+   final String errorMessage ;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class ErrorMessage extends StatelessWidget {
         Text(
           errorMessage,
           textAlign: TextAlign.center,
-          style: themeData.textTheme.headline1!.copyWith(
+          style: themeData.textTheme.displayLarge!.copyWith(
             fontSize: 18,
             fontWeight: FontWeight.bold,
           ),

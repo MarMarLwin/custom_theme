@@ -21,15 +21,15 @@ class AdviceRemoteDatasourceImplementation implements AdviceRemoteDatasource {
   @override
   Future<AdviceEntity> getRandomAdviceFromAPI() async {
     final response = await client.get(
-      Uri.parse('https://api.adviceslip.com/advice'),
+      Uri.parse('https://api.flutter-community.com/api/v1/advice'),
       headers: {
         'Content-Type': 'application/json',
       },
     );
 
     if (response.statusCode == 200) {
-      final  Map responseBody = json.decode(response.body);
-      return AdviceModel.fromJson(responseBody['slip']);
+      final   responseBody = json.decode(response.body);
+      return AdviceModel.fromJson(responseBody);
     } else {
       throw ServerException();
     }

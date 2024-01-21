@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AdviceField extends StatelessWidget {
+   static String emptyAdvice = "";
   final String adviceText;
   const AdviceField({Key? key, required this.adviceText}) : super(key: key);
 
@@ -16,7 +17,7 @@ class AdviceField extends StatelessWidget {
             color: themeData.colorScheme.onPrimary,
             borderRadius: BorderRadius.circular(15)),
         child: Text(
-          '''" $adviceText "''',
+          adviceText.isNotEmpty?'''" $adviceText "''':emptyAdvice,
           textAlign: TextAlign.center,
           style: themeData.textTheme.displayLarge!.copyWith(
               fontSize: 16,

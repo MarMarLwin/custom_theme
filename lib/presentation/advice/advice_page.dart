@@ -188,7 +188,7 @@ class AdvicePage extends StatelessWidget {
                             } else if (adviceState is AdviceFailure) {
                               return const Expanded(
                                 child: Center(
-                                    child: ErrorMessage(
+                                    child: ErrorMessage(errorMessage: 'Ups, there was something going wrong, try again!',
                                   key: Key(errorMessageKey),
                                 )),
                               );
@@ -198,6 +198,7 @@ class AdvicePage extends StatelessWidget {
                     ),
                     const SizedBox(height: 20,),
 
+Text('dddfd ksdjfl sdjfls lksdjfl hlsfla hlsjdfl lsjf',style:TextStyle()),
                     SizedBox(
                         height: 50,
                         child: Center(

@@ -8,8 +8,7 @@ class AdviceModel extends AdviceEntity with EquatableMixin {
       : super(advice: advice, id: id);
 
   factory AdviceModel.fromJson(Map<String, dynamic> json) {
-    return AdviceModel(
-        advice: json['advice']!, id: (json['id']! as num).toInt());
+    return AdviceModel(advice: json['advice'], id: json['advice_id']);
   }
 
   @override

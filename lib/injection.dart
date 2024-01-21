@@ -10,10 +10,10 @@ import 'application/theme/theme_service.dart';
 import 'domain/repositories/advice/advice_repository.dart';
 import 'domain/repositories/theme/theme_repository.dart';
 import 'domain/usecases/theme_usecase.dart';
-import 'infrastructure/datasources/advice_remote_datasource.dart';
-import 'infrastructure/datasources/theme_local_datasource.dart';
-import 'infrastructure/repositories/advice_repository_impl.dart';
-import 'infrastructure/repositories/theme_repository_impl.dart';
+import 'data/datasources/advice_remote_datasource.dart';
+import 'data/datasources/theme_local_datasource.dart';
+import 'data/repositories/advice_repository_impl.dart';
+import 'data/repositories/theme_repository_impl.dart';
 
 
 final sl = GetIt.I; // sl == service locator
