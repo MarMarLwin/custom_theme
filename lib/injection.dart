@@ -2,7 +2,6 @@
 import 'package:custom_theme/application/advice/cubit/advicer_cubit.dart';
 import 'package:custom_theme/domain/usecases/advicer_usecase.dart';
 import 'package:get_it/get_it.dart';
-import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
